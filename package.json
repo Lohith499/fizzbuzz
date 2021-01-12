@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "(cd client && npm install) && (cd server && npm install)",
+    "build": "(cd client && npm install) && (cd..) &&  (cd server && npm install)",
     "clientbuild": "cd client && npm install && npm start",
     "serverbuild": "cd server && npm install && npm start",
     "client": "cd client && npm start",

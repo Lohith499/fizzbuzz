@@ -10,7 +10,6 @@ app.use(bodyparser.json())
 
 
 app.post('/calculate', function (req, res, next) {
-  console.log("Request Hit")
     const body = req.body;
     let x = body.data
     x = x.split(",");

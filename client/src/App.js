@@ -10,7 +10,8 @@ function App() {
     setResult([]);
   }
   async function onSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
+    console.log("Client")
     if (inp.length > 0) {
       try {
         let res = await axios.post("http://localhost:5000/calculate", { data: inp });
@@ -29,14 +30,13 @@ function App() {
       setResult(["Enter some Value input before you hit submit"]);
     }
   }
-  console.log("Client")
+
   return (
     
     <div className="App">
-      <form onSubmit={(e) => onSubmit(e)} method="post">
+        <h4>Enter set of values with , seperated in below text box ex : 1, 3, 5 , , 15, A, 23</h4>
         <input type="text" value={inp} onChange={updateInput}></input><br />
-        <button type="submit">Submit</button>
-      </form>
+        <button onClick={(e) => onSubmit(e)}>Submit</button>
       {result.length > 0 && <h4>Result</h4>}
       {result.map((item,index) =>
         <p key={index}>{item}</p>)}
