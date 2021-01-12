@@ -8,13 +8,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "(cd server && npm install) && (cd ..) && (cd client && npm install)",
+    "build": "(cd client && npm install) && (cd server && npm install)",
     "clientbuild": "cd client && npm install && npm start",
     "serverbuild": "cd server && npm install && npm start",
     "client": "cd client && npm start",
     "server": "cd server && npm start",
-    "start": "(cd server && npm start) && (cd..) && (cd client && npm start)",
-    "conc": "concurrently \"npm run client\"  \"npm run server\""
+    "conc": "(cd server && npm start) && (cd..) && (cd client && npm start)",
+    "start": "concurrently \"npm run client\"  \"npm run server\""
   },
   "repository": {
     "type": "git",

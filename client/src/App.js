@@ -29,7 +29,9 @@ function App() {
       setResult(["Enter some Value input before you hit submit"]);
     }
   }
+  console.log("Client")
   return (
+    
     <div className="App">
       <form onSubmit={(e) => onSubmit(e)} method="post">
         <input type="text" value={inp} onChange={updateInput}></input><br />
